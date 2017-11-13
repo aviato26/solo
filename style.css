@@ -1,23 +1,29 @@
 body{
-  background: repeating-radial-gradient(circle, blue 30%, red 10%, orange 40%);
-  width: 100%;
   position: relative;
-}
+  background: repeating-radial-gradient(circle, red 30%, orange 40%);
+  }
 
 img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%);
-  animation: fadeIn 6s;
+  opacity: 1;
+  transition: opacity 3s ease-in-out;
+  animation: loadFadeIn 8s;
 }
 
-@keyframes fadeIn {
-  from{
-    opacity: 0;
-  }
+img:hover {
+	opacity: 0;
+	transition: opacity 3s ease-in-out;
+}
 
-  to {
-    opacity: 1;
-  }
+@keyframes loadFadeIn {
+	from {
+		opacity: 0;
+	}
+	
+	to {
+		opacity: 1;
+	}
 }
